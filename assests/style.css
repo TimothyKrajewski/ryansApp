@@ -18,6 +18,7 @@ background-size: cover;
 input:required {
 	border: 1px solid red;
 }
+
 h3{
   font-family: 'Ubuntu Mono', monospace;
   text-align: center;
@@ -127,6 +128,9 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+.btnG{
+	font-size:20px;
+}
 }
 @media (max-width: 768px) {
 .btn-responsive {
@@ -136,12 +140,19 @@ body {
 	line-height: 1;
 	border-radius:3px;
 }
-
+.btnG{
+	font-size:10;
+}
 }
 @media (min-width: 769px) and (max-width: 992px) {
 .btn-responsive {
 	padding:4px 9px;
 	font-size:90%;
+	line-height: 1.2;
+}
+.btnG{
+	padding:4px 9px;
+	font-size:15;
 	line-height: 1.2;
 }
 }
