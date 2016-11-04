@@ -1,8 +1,8 @@
-(function() {
+(function(){
   var food = {Type:"", Price:0.0,};
   var cart = new Array(10);
 
-  function addToCart(var type){
+  function addToCart(type){
     var i = new food();
     i.Type = type;
     cart.add(i);
