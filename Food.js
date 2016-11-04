@@ -1,17 +1,16 @@
 (function(){
-
-  var cart = new Array(10);
+  //var food = {Type:"", Price:0.0,};
+  var cart = new Array();
+  window.num = "HELLO WORLD HELP MAKE THIS WORK";
   var images = new Array();
-
+  document.getElementById("cart").addEventListener("click", getReceipt);
   images = document.getElementsByClassName('img-thumbnail');
   for (var i = 0; i < images.length; i++){
     images[i].addEventListener("click", clickEvent);
   }
 
   function clickEvent(event){
-    alert(this.innerHTML);
-    addToCart("", 13.57);
-    alert("Item Successfully added");
+    addToCart(this.name, 13.57);
   }
 
   function addToCart(type, price){
@@ -19,14 +18,21 @@
     food.Type = type;
     food.Price = price;
     cart.push(food);
+    //alert(cart[0].Type);
   }
 
-  function getReceipt(){
+  function getReceipt(event){
     var str = "";
+    var total = 0;
     for(var i = 0; i < cart.length; i++){
-      str += cart[i].Type + cart[i].Price;
+      str += cart[i].Type + " : " + cart[i].Price + "\n";
+      total += cart[i].Price;
     }
-    return str;
+    str += total;
+    window.localStorage.setItem("order", str);
+    window.localStorage.setItem("count", cart.length);
+    //alert("" + str + "Total : " + total);
+    //return str;
   }
 
 })();
