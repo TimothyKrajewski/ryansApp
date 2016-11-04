@@ -18,6 +18,7 @@ background-size: cover;
 input:required {
 	border: 1px solid red;
 }
+
 h3{
   font-family: 'Ubuntu Mono', monospace;
   text-align: center;
