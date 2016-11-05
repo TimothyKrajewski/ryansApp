@@ -11,6 +11,7 @@
 
   function clickEvent(event){
     addToCart(this.name, 13.57);
+    alert("Added "+ this.name + " To Cart");
   }
 
   function addToCart(type, price){
@@ -25,7 +26,7 @@
     var str = "";
     var total = 0;
     for(var i = 0; i < cart.length; i++){
-      str += cart[i].Type + " : " + cart[i].Price + "\n";
+      str += cart[i].Type + " : " + cart[i].Price + "\n" + "<br>";
       total += cart[i].Price;
     }
     str += total;

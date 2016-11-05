@@ -134,6 +134,18 @@ ul{
   font-weight: bold;
   font-size: 3em;
 }
+.cart{
+	display: block;
+  background: #9E0101;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 2px;
+  text-decoration: none;
+	position: fixed;
+  bottom: 0px;
+  right: 0px;
+	color: #ffffff;
+	text-decoration: none;
+}
 @media (min-width: 770px) {
 .btn-responsive {
 	width: 50%;

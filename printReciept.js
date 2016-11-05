@@ -9,6 +9,6 @@
   }*/
 
   var prnt = document.getElementById("printOut");
-  prnt.innerHTML = order;
+  prnt.innerHTML += order;
   window.localStorage.removeItem("order");
 })()
