@@ -25,19 +25,40 @@
         </nav>
       </div>
       <div class="jumbotron">
-      <ul class="flex-container">
-        <li class="flex-item"><img src="assests/img/menu/menu1.jpg" class="img-thumbnail" name="Bruchetta" alt="Sorry couldn't find picture"></li>
-        <li class="flex-item"><img src="assests/img/menu/menu2.jpg" class="img-thumbnail" name="NUMBER 2" alt="Sorry couldn't find picture"></li>
-        <li class="flex-item"><img src="assests/img/menu/menu3.jpg" class="img-thumbnail" name="NUMBER 3" alt="Sorry couldn't find picture"></li>
-        <li class="flex-item"><img src="assests/img/menu/menu4.jpg" class="img-thumbnail" name="NUMBER 4" alt="Sorry couldn't find picture"></li>
-        <li class="flex-item"><img src="assests/img/menu/menu5.jpg" class="img-thumbnail" name="Margarita Pizza" alt="Sorry couldn't find picture"></li>
-        <li class="flex-item"><img src="assests/img/menu/menu6.jpg" class="img-thumbnail" name="Wings" alt="Sorry couldn't find picture"></li>
-        <li class="flex-item"><img src="assests/img/menu/menu7.jpg" class="img-thumbnail" name="Fire background" alt="Sorry couldn't find picture"></li>
-        <li class="flex-item"><img src="assests/img/menu/menu8.jpg" class="img-thumbnail" name="Bacon Pizza" alt="Sorry couldn't find picture"></li>
-        <li class="flex-item"><img src="assests/img/menu/menu9.jpg" class="img-thumbnail" name="Pepper Pizza" alt="Sorry couldn't find picture"></li>
-      </ul>
-      <script src="Food.js"></script>
+        <img src="assests/img/menu/apps.png" onclick="return togglePageElementVisibility(app)"  class="img-responsive">
+        <div id="app" class="inv">app</div>
+        <img src="assests/img/menu/bevs.png"  onclick="return togglePageElementVisibility(bevs)" class="img-responsive" >
+        <div id="bevs" class="inv">bev</div>
+        <img src="assests/img/menu/cals.png"  onclick="return togglePageElementVisibility(cals)" class="img-responsive" >
+        <div id="cals" class="inv">cals</div>
+        <img src="assests/img/menu/pans.png"  onclick="return togglePageElementVisibility(pan)" class="img-responsive" >
+        <div id="pan" class="inv">pan</div>
+        <img src="assests/img/menu/pizza.png"  onclick="return togglePageElementVisibility(pizzas)" class="img-responsive">
+         <div id="pizzas" class="inv">pizza</div>
+        <img src="assests/img/menu/salads.png"  onclick="return togglePageElementVisibility(salad)" class="img-responsive" >
+        <div id="salad" class="inv">salad</div>
+        <img src="assests/img/menu/specs.png"  onclick="return togglePageElementVisibility(spec)" class="img-responsive" >
+         <div id="spec" class="inv">specails</div>
+        <img src="assests/img/menu/stromb.png"  onclick="return togglePageElementVisibility(stromb)" class="img-responsive" >
+        <div id="stromb" class="inv">stromb</div>
+        <img src="assests/img/menu/sweets.png"  onclick="return togglePageElementVisibility(sweets)" class="img-responsive" >
+        <div id="sweets" class="inv">sweets</div>
+
+
+       <script>
+       function togglePageElementVisibility(what)
+        {
+            var obj = typeof what == 'object'
+                ? what : document.getElementById(what);
+
+            if (obj.style.display == 'none')
+                obj.style.display = 'block';
+            else
+                obj.style.display = 'none';
+            return false;
+        }
+       </script>
       </div>
-      <button onclick="window.location = 'payment.html'" class="cart">Go To Cart<button>
+      <button onclick="window.location = 'payment.html'" class="cart">Go To Cart</button>
       </body>
 </html>
